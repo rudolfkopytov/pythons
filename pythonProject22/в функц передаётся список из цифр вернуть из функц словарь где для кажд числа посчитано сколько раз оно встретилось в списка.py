@@ -10,5 +10,5 @@ def list_stat(A):
 def list_stat_2(A):
     stat ={}
     for number in set (A) :# перебираем все цифры из словаря
-        stat[nunber] = A.count(number)
+        stat[number] = A.count(number)
     return stat
