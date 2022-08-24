@@ -1,0 +1,19 @@
+{
+  "20": [
+    {
+      "name": "eur",
+      "cost": 70.0,
+      "amount": 200.0
+    }
+    {
+      "name": "ETH"
+      "cost": 3441,
+      "amount": 0.06
+    },
+    {
+      "name": "BTC",
+      "cost": 44837,
+      "amount": 0.003
+    }
+  ]
+}
