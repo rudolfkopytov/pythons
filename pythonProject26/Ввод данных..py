@@ -17,7 +17,7 @@ def load_data():
 #save_data(d) - это сохранение нашего файла
 #print(load_data()) # - а это считывание их файла
 def show_percent(name, percent, width = 50): # это считывает данные о валюте и скалько эта валюта занимает (чего???)
-    fill = "chr(9608)"
+    fill = "█"
     empty = "-"
     bars = round(percent * width)
 
@@ -35,14 +35,14 @@ def plot_stat(data, signs, height = 12):# это рисует сам графи�
             line = " "*10
         for num in data:
             if max(data) - (max(data))/ height*(i+1) < num:
-                line += "chr(9608)"
+                line += "█   "
             else:
-                line += "   "
+                line += "    "
 
         print(line)
 
-    print(f"{str(round(min(data), 2)):10}"+"chr(9608)" * len(data))
-    print(" "*10 + "chr(9608)" * len(data))
+    print(f"{str(round(min(data), 2)):10}"+"█   " * len(data))
+    print(" "*10 + "█   " * len(data))
     line = " " *10
     for sign in signs:
         line += f"{sign:4}"
@@ -66,19 +66,18 @@ def show_convert(data):# переводит все валюты в доллар�
     plot_stat(converted, weeks)
 
 def show_stat(data, weeknum):# подсчитывает для (какой-то недели!!) сколько каждая валюта занимает в порфеле место, если переводить в доллары и потом отображает на графике в форме прогресс баров в порядке от самой значимой валюты до самой не значимой
-
     total = 0
     for curr in data[weeknum]:
         total += curr["cost"] * curr["amount"]
 
-        stats = []
-        for curr in data[weeknum]:
-            stats.append((curr["cost"] * curr["amount"] / total, curr["name"]))
+    stats = []
+    for curr in data[weeknum]:
+        stats.append( (curr["cost"] * curr["amount"] / total, curr["name"]) )
 
-        stats = reversed(sorted(stats))
+    stats = reversed(sorted(stats))
 
-        for s, name in stats:
-            show_percent(name, s)
+    for s, name in stats:
+        show_percent(name, s)
 
 def select_mode():# показывает режимы работы и спарашивает у пользователя число, который кодирует этот режим, и вызывает его на мониторе
     print()
