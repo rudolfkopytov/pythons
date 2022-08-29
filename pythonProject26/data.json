@@ -1,0 +1,45 @@
+{
+  "20": [
+    {
+      "name": "RUB",
+      "cost": 0.1354,
+      "amount": 1000
+    },
+    {
+      "name": "BTC",
+      "cost": 36008,
+      "amount": 0.003
+    }
+  ],
+  "21": [
+    {
+      "name": "RUB",
+      "cost": 0.1354,
+      "amount": 2000
+    },
+    {
+      "name": "BTC",
+      "cost": 36008,
+      "amount": 0.006
+    }
+  ],
+  "23": [
+    {
+      "name": "USD",
+      "cost": 55.0,
+      "amount": 100.0
+    }
+  ],
+  "34": [
+    {
+      "name": "USD",
+      "cost": 55.0,
+      "amount": 100.0
+    },
+    {
+      "name": "Bit",
+      "cost": 4100.0,
+      "amount": 100.0
+    }
+  ]
+}
