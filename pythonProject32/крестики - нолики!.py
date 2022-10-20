@@ -1,3 +1,14 @@
+def greet():
+    print("-------------------")
+    print("  Приветсвуем вас  ")
+    print("      в игре       ")
+    print("  крестики-нолики  ")
+    print("-------------------")
+    print(" формат ввода: x y ")
+    print(" x - номер строки  ")
+    print(" y - номер столбца ")
+
+greet()
 field = [[" "] * 3 for i in range(3) ]# создаём массив из 9 цифр.
 
 #def show():
@@ -123,4 +134,4 @@ while True:
 
     if count == 9:
         print(" Ничья!")
-        break 
+        break
